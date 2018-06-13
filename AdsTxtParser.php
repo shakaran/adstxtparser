@@ -21,6 +21,56 @@ class Parser
     private $warnings = [];
     private $errors = [];
 
+    /**
+     * Get the comments variables in the parsing of a file
+     *
+     * @return array
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * Get the fields variables in the parsing of a file
+     *
+     * @return array
+     */
+    public function getVariables()
+    {
+        return $this->variables;
+    }
+
+    /**
+     * Get the fields produced in the parsing of a file
+     *
+     * @return array
+     */
+    public function getFields()
+    {
+        return $this->fields;
+    }
+
+    /**
+     * Get the warnings produced in the parsing of a file
+     *
+     * @return array
+     */
+    public function getWarnings()
+    {
+        return $this->warnings;
+    }
+
+    /**
+     * Get the errors produced in the parsing of a file
+     *
+     * @return array
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
     public function readExternalFile(string $domain = 'localhost')
     {
         $fileName = $domain . '/ads.txt';
