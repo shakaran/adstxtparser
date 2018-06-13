@@ -1,4 +1,9 @@
 <?php
+
+namespace AdsTxtParser;
+
+use AdsTxtParser\Exception\AdsFileNotFound;
+
 /**
  * AdsTxtParser
  *
@@ -10,9 +15,6 @@
  *
  * @license AGPLv3
  */
-
-namespace AdsTxtParser;
-
 class Parser
 {
     private $comments = [];
@@ -71,14 +73,14 @@ class Parser
         return $this->errors;
     }
 
-    public function readExternalFile(string $domain = 'localhost')
+    public function readExternalFile(string $domain = 'http://localhost')
     {
         $fileName = $domain . '/ads.txt';
-        $adsTxtFile = file_get_contents($fileName);
+        $adsTxtFile = @file_get_contents($fileName);
 
         if(FALSE === $adsTxtFile)
         {
-            throw new \Exception('Error getting ads.txt file for the domain');
+            throw new AdsFileNotFound('Error getting ads.txt file for the domain');
         }
         elseif(empty($adsTxtFile))
         {
