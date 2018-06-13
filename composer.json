@@ -2,7 +2,7 @@
     "name": "shakaran/adstxtparser",
     "type": "library",
     "description": "A open source implemation in PHP of Ads.txt Specification Version 1.0.1 (OpenRTB working group)",
-    "license": "AGPLv3",
+    "license": "AGPL-3.0-or-later",
     "keywords" : [
         "adstxtparser",
         "php",
