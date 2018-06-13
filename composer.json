@@ -1,6 +1,30 @@
 {
+    "name": "shakaran/adstxtparser",
+    "type": "library",
+    "description": "A open source implemation in PHP of Ads.txt Specification Version 1.0.1 (OpenRTB working group)",
+    "license": "AGPLv3",
+    "keywords" : [
+        "adstxtparser",
+        "php",
+        "parser",
+        "ads",
+        "adstxt",
+        "openrtb",
+        "specification"
+    ],
+    "authors": [
+        {
+            "name": "Ángel Guzmán Maeso",
+            "email": "angel@guzmanmaeso.com",
+            "homepage": "https://shakaran.net/blog",
+            "role": "Main Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {"AdsTxtParser\\": "./"}
+    },
+    "require": {
+        "php": ">=7.0",
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
