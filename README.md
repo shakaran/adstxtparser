@@ -21,6 +21,14 @@ A open source implentation in PHP of [Ads.txt Specification Version 1.0.1](https
 
 Ads.txt is an initiative by the Interactive Advertising Bureau to enable publishers to take control over who can sell their ad inventory.
 
+Since 01 Nov 2017 Google is filtering traffic based on ads.txt
+
+It is a simple logic of the textfile as mechanism to fight adfraud
+
+Widely accepted and implemented by more and more publishers, ssp and dsp.
+
+Can prevent advertisers from buying invalid traffic.
+
 [Check more info](https://iabtechlab.com/ads-txt/) about it.
 
 ## Donate ##
