@@ -7,6 +7,12 @@ use AdsTxtParser\Exception\AdsFileNotFound;
 
 class ParserTest extends TestCase
 {
+    public function testCreateInstance()
+    {
+        $parser = new Parser;
+        $this->assertTrue($parser instanceof Parser);
+    }
+
     public function testExternalFile()
     {
         try
@@ -19,6 +25,7 @@ class ParserTest extends TestCase
         }
         catch(AdsFileNotFound $e)
         {
+            $this->setExpectedException('AdsFileNotFound');
             $this->assertEquals($e->getMessage(), 'Error getting ads.txt file for the domain');
         }
     }
@@ -39,6 +46,7 @@ class ParserTest extends TestCase
         }
         catch(AdsFileNotFound $e)
         {
+            $this->setExpectedException('AdsFileNotFound');
             $this->assertFalse(TRUE);
         }
 
