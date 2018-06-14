@@ -210,7 +210,7 @@ class Parser
                 }
 
                 // Lines starting with # symbol are considered comments and are ignored
-                if(isset($value[0]) && $value[0] === '#')
+                if(isset($value[0]) && $value[0] === '#') // Full-line comment
                 {
                     $this->comments[] = ['line' => $lineNumber, 'value' => $value];
                 }
@@ -220,7 +220,7 @@ class Parser
                      * Comment are denoted by the character "#". Any line containing "#" should inform the data
                      * consumer to ignore the data after the "#" character to the end of the line.
                      */
-                    if (FALSE !==  strpos($value, '#') )
+                    if (FALSE !==  strpos($value, '#') ) // Partial-line comment
                     {
                         $parts = explode('#', $value);
                         $numberParts = count($parts);
@@ -345,7 +345,7 @@ class Parser
                          * Comment are denoted by the character "#". Any line containing "#" should inform the data
                          * consumer to ignore the data after the "#" character to the end of the line.
                          */
-                        if (FALSE !==  strpos($value, '#') )
+                        if (FALSE !==  strpos($value, '#') ) // Partial-line comment
                         {
                             $parts = explode('#', $value);
                             $numberParts = count($parts);
