@@ -17,6 +17,10 @@ A open source implentation in PHP of [Ads.txt Specification Version 1.0.1](https
 
 ![Graph Ads.txt](https://i.imgur.com/NnVCHz9.png)
 
+## WHAT IS ADS.TXT? ##
+
+Ads.txt is an initiative by the Interactive Advertising Bureau to enable publishers to take control over who can sell their ad inventory.
+
 [Check more info](https://iabtechlab.com/ads-txt/) about it.
 
 ## Donate ##
