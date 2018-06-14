@@ -27,6 +27,103 @@ Install with composer with only:
 composer require shakaran/adstxtparser
 ```
 
+## How to use ##
+
+A quick use to instanciate and run over a domain is:
+
+```php
+
+use AdsTxtParser\Parser;
+
+$parser = new Parser();
+$parser->readExternalFile('http://estaticos.elmundo.es');
+```
+
+Note: that you only have to pass as argument the domain.
+
+After you already fetch the data in the Parser object,
+you can query about errors:
+
+```php
+$errors = $parser->getErrors();
+```
+
+Or warnings:
+
+```php
+$warnings = $parser->getWarnings();
+```
+
+Or get the variables defined:
+
+```php
+$variables = $parser->getVariables();
+```
+
+Or get the fields defined:
+
+```php
+$fields = $parser->getFields();
+```
+
+Or get the comments defined:
+
+```php
+$comments = $parser->getComments();
+```
+
+Even more complex operations, as know the list of resellers:
+
+```php
+$resellers = $parser->getResellers();
+```
+
+Or the list or directs:
+
+```php
+$directs = $parser->getDirects();
+```
+
+A complex example using all the options could be:
+
+```php
+try
+        {
+            // By default localhost
+            $parser = new Parser();
+            $parser->readExternalFile('http://estaticos.elmundo.es');
+
+            // More examples to test:
+            // https://elpais.com/ads.txt
+            // https://www.elconfidencial.com/ads.txt
+        }
+        catch(AdsFileNotFound $e)
+        {
+            echo $e->getMessage();
+        }
+
+        $comments = $parser->getComments();
+        // var_dump($comments);
+
+        $errors = $parser->getErrors();
+        //var_dump($errors);
+
+        $warnings = $parser->getWarnings();
+        // var_dump($warnings);
+
+        $fields = $parser->getFields();
+        // var_dump($fields);
+
+        $variables = $parser->getVariables();
+        //var_dump($variables);
+
+        $resellers = $parser->getResellers();
+        //var_dump(count($resellers));
+
+        $directs = $parser->getDirects();
+        //var_dump(count($directs));
+```
+
 ## Tests ##
 
 Executing the tests:
