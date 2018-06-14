@@ -13,9 +13,19 @@
 
 
 
-A open source implemation in PHP of Ads.txt Specification Version 1.0.1 (OpenRTB working group)
+A open source implemation in PHP of [Ads.txt Specification Version 1.0.1](https://iabtechlab.com/wp-content/uploads/2017/09/IABOpenRTB_Ads.txt_Public_Spec_V1-0-1.pdf) (OpenRTB working group)
 
 ![Graph Ads.txt](https://i.imgur.com/NnVCHz9.png)
+
+[Check more info](https://iabtechlab.com/ads-txt/) about it.
+
+## Setup ##
+
+Install with composer with only:
+
+```cli
+composer require shakaran/adstxtparser
+```
 
 ## Tests ##
 
