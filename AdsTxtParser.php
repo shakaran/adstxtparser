@@ -17,12 +17,53 @@ use AdsTxtParser\Exception\AdsFileNotFound;
  */
 class Parser
 {
+    /**
+     * Store the comments parsed for a file
+     *
+     * @var array
+     */
     private $comments = [];
+
+    /**
+     * Store the variables parsed for a file
+     *
+     * @var array
+     */
     private $variables = [];
+
+    /**
+     * Store the fields parsed for a file
+     *
+     * @var array
+     */
     private $fields = [];
+
+    /**
+     * Store the warnings parsed for a file
+     *
+     * @var array
+     */
     private $warnings = [];
+
+    /**
+     * Store the errors parsed for a file
+     *
+     * @var array
+     */
     private $errors = [];
+
+    /**
+     * Store the resellers parsed for a file
+     *
+     * @var array
+     */
     private $resellers = [];
+
+    /**
+     * Store the directs parsed for a file
+     *
+     * @var array
+     */
     private $directs = [];
 
     /**
@@ -75,6 +116,13 @@ class Parser
         return $this->errors;
     }
 
+    /**
+     * Get the fields resellers in the parsing of a file
+     *
+     * This is the relationship marked as "reseller" in the spec
+     *
+     * @return array
+     */
     public function getResellers()
     {
         if(empty($this->resellers))
@@ -97,6 +145,13 @@ class Parser
         return $this->resellers;
     }
 
+    /**
+     * Get the fields directs in the parsing of a file
+     *
+     * This is the relationship marked as "directs" in the spec
+     *
+     * @return array
+     */
     public function getDirects()
     {
         if(empty($this->directs))
@@ -343,6 +398,19 @@ class Parser
         }
     }
 
+    /**
+     * Parse a ads.txt file from a external domain
+     *
+     * Note that the part of the url shouldn't be included since the spec
+     * says that always should be checked at /ads.txt in the root level of the
+     * domain
+     *
+     * Optional: Support for fileinfo php extension for check the mimetype of the file
+     *
+     * @param string $domain The domain base url (By default localhost, for testing)
+     * @throws AdsFileNotFound When the file is not found
+     * @throws \Exception
+     */
     public function readExternalFile(string $domain = 'http://localhost')
     {
         $fileName = $domain . '/ads.txt';
