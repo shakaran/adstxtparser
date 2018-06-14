@@ -162,4 +162,8 @@ cd Tests; sudo php -S localhost:80
 vendor/phpunvendor/phpunit/phpunit/phpunit --configuration=Tests/phpunit.xml --include-path=Tests
 ```
 
+## License ##
+
+AGPLv3 or later, see [LICENSE](LICENSE) file for more details.
+
 [3]: https://github.com/shakaran/adstxtparser/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue
