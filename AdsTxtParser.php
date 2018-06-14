@@ -71,7 +71,7 @@ class Parser
      *
      * @return array
      */
-    public function getComments()
+    public function getComments() : array
     {
         return $this->comments;
     }
@@ -81,7 +81,7 @@ class Parser
      *
      * @return array
      */
-    public function getVariables()
+    public function getVariables() : array
     {
         return $this->variables;
     }
@@ -91,7 +91,7 @@ class Parser
      *
      * @return array
      */
-    public function getFields()
+    public function getFields() : array
     {
         return $this->fields;
     }
@@ -101,7 +101,7 @@ class Parser
      *
      * @return array
      */
-    public function getWarnings()
+    public function getWarnings() : array
     {
         return $this->warnings;
     }
@@ -111,7 +111,7 @@ class Parser
      *
      * @return array
      */
-    public function getErrors()
+    public function getErrors() : array
     {
         return $this->errors;
     }
@@ -123,7 +123,7 @@ class Parser
      *
      * @return array
      */
-    public function getResellers()
+    public function getResellers() : array
     {
         if(empty($this->resellers))
         {
@@ -152,7 +152,7 @@ class Parser
      *
      * @return array
      */
-    public function getDirects()
+    public function getDirects() : array
     {
         if(empty($this->directs))
         {
@@ -182,8 +182,10 @@ class Parser
      *
      * @param string $data
      * @throws \Exception
+     *
+     * @return void
      */
-    public function parseString(string $data = NULL)
+    public function parseString(string $data = NULL) : void
     {
         // A non-empty set of records, separated by line breaks
         $lines = explode(PHP_EOL, $data);
@@ -410,8 +412,10 @@ class Parser
      * @param string $domain The domain base url (By default localhost, for testing)
      * @throws AdsFileNotFound When the file is not found
      * @throws \Exception
+     *
+     * @return void
      */
-    public function readExternalFile(string $domain = 'http://localhost')
+    public function readExternalFile(string $domain = 'http://localhost') : void
     {
         $fileName = $domain . '/ads.txt';
         $adsTxtFile = @file_get_contents($fileName);
