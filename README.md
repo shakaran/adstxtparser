@@ -39,6 +39,10 @@ Install with composer with only:
 composer require shakaran/adstxtparser
 ```
 
+## TECHNICAL NOTES ##
+
+Requires PHP 7.0+.
+
 ## How to use ##
 
 A quick use to instanciate and run over a domain is:
