@@ -19,6 +19,14 @@ A open source implentation in PHP of [Ads.txt Specification Version 1.0.1](https
 
 [Check more info](https://iabtechlab.com/ads-txt/) about it.
 
+## Donate ##
+
+I am a freelancer [Senior Backend Engineer](https://upwork.com/fl/angelguzmanmaeso#/) working on my free time for develop this.
+
+If you want pay me some beer or severals to appreciate the efforts:
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KY8JY46S5WPWS)
+
 ## Setup ##
 
 Install with composer with only:
