@@ -378,7 +378,7 @@ class Parser
 
                             // The <VARIABLE> is a string identifier without internal whitespace.
                             $variable = str_replace(' ', '', $variable);
-                            $remain = $parts[1];
+                            $remain = [$parts[1]];
                         }
 
                         $finalValue = urlencode(trim(implode('=', $remain)));
